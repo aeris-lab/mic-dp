@@ -2,6 +2,10 @@
 
 Thank you for considering contributing to mic_dp! This document provides guidelines and instructions for contributing to this project.
 
+## Code of Conduct
+
+Please note that this project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to the project maintainers.
+
 ## How to Contribute
 
 ### Reporting Bugs
