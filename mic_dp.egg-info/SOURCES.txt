@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+mic_dp.egg-info/PKG-INFO
+mic_dp.egg-info/SOURCES.txt
+mic_dp.egg-info/dependency_links.txt
+mic_dp.egg-info/requires.txt
+mic_dp.egg-info/top_level.txt
