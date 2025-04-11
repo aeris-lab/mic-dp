@@ -1,4 +1,4 @@
-# mic_dp: Maximum Information Coefficient Differential Privacy
+# MIC_DP: Maximum Information Coefficient Differential Privacy
 
 `mic_dp` is a Python package that enables differentially private data transformation guided by the *Maximum Information Coefficient* (MIC), with application to both supervised and unsupervised learning tasks. Traditional differential privacy (DP) mechanisms often degrade utility uniformly across features. In contrast, `mic_dp` uses MIC to scale the noise injection, preserving more utility in informative features.
 
