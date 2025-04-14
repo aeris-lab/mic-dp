@@ -27,9 +27,9 @@ plt.rcParams.update({
 })
 
 # Global parameters
-PERCENTAGE = 1
+PERCENTAGE = 0.5
 DELTA = 1e-5
-AMPLIFICATION_FACTOR = 5
+AMPLIFICATION_FACTOR = 3
 EPSILONS = np.arange(0.1, 1, 0.1)
 
 # =====================================
