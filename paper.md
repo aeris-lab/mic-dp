@@ -109,7 +109,7 @@ For the MIC calculation, we use the MINE algorithm [@Reshef2011], which provides
 
 We conducted experiments on machine learning tasks to evaluate the effectiveness of our approach.
 
-We used the Adult Census Income dataset with 48,842 instances and 14 attributes. We compared the performance of different noise scaling strategies across various privacy budgets (ε values ranging from 0.1 to 1.0). For each strategy, we measured:
+We use Coffee Shop Daily Revenue Prediction Dataset (CSDRP) to support machine learning tasks related to forecasting daily revenue for coffee shops. This dataset is particularly useful for developing and evaluating regression models aimed at predicting daily revenue based on the aforementioned factors. It serves as a practical resource for data scientists and analysts interested in revenue forecasting and operational analytics within the coffee shop industry. We compared the performance of different noise scaling strategies across various privacy budgets (ε values ranging from 0.1 to 1.0). For each strategy, we measured:
 1. Feature distortion (MAE between original and private features) ![Feature MAE comparison for MIC-DP vs. state-of-art approaches](MAE.png)
 
 
@@ -126,6 +126,6 @@ Future work includes extending the package to support additional privacy mechani
 
 # Acknowledgements
 
-We acknowledge the creators of the ACI and HED datasets for making their data publicly available. We also thank the developers of scikit-learn and diffprivlib for their valuable tools that enabled this work.
+We acknowledge the creators of the CSDRP dataset for making their data publicly available. We also thank the developers of scikit-learn and diffprivlib for their valuable tools that enabled this work.
 
 # References
