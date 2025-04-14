@@ -34,7 +34,7 @@ This package includes functions for:
 - Calculating MIC, Pearson, and Mahalanobis-based feature relevance
 - Feature selection based on scaled importance
 - Applying Gaussian or Laplace DP mechanisms using custom noise scaling
-- Evaluating MAE, clustering scores, and plotting results
+- Evaluating MAE and plotting results
 
 The library has been evaluated using:
 1. **ACI Dataset (Adult Census Income)** from the UCI repository for supervised learning [@Dua2019]. This dataset includes demographic features used to predict income classes.
@@ -55,7 +55,7 @@ Researchers and practitioners in fields such as healthcare, finance, and social 
 1. Apply differential privacy while preserving analytical utility
 2. Conduct feature selection under privacy constraints
 3. Compare different noise-scaling strategies
-4. Evaluate the impact of privacy on supervised and unsupervised learning tasks
+4. Evaluate the impact of privacy on machine learning tasks
 
 # State of the Field
 
@@ -86,7 +86,7 @@ Document Processing: Our application processes datasets through a pipeline that:
 1. Calculates feature relevance using the selected method (MIC, Pearson, or Mahalanobis)
 2. Scales noise factors inversely proportional to feature importance
 3. Applies differential privacy with the scaled noise factors
-4. Evaluates utility through various metrics (MAE, prediction accuracy, clustering quality)
+4. Evaluates utility through various metrics (MAE, prediction accuracy)
 
 The application employs the following key functions:
 
@@ -109,20 +109,14 @@ private_data = correlated_dp_gaussian(
 
 For the MIC calculation, we use the MINE algorithm [@Reshef2011], which provides a measure of the strength of the relationship between variables, capturing both linear and non-linear associations. The entire methodology for noise scaling and differential privacy application is illustrated in Figure 1.
 
-![Figure 1: Workflow showing the noise scaling and differential privacy application process. The MIC-based scaling module calculates feature importance and scales noise inversely proportional to importance.](workflow_diagram.png)
-
 # Experiments
 
-We conducted experiments on both supervised and unsupervised learning tasks to evaluate the effectiveness of our approach.
+We conducted experiments on machine learning tasks to evaluate the effectiveness of our approach.
 
-For supervised learning, we used the Adult Census Income dataset with 48,842 instances and 14 attributes. We compared the performance of different noise scaling strategies across various privacy budgets (ε values ranging from 0.1 to 1.0). For each strategy, we measured:
+We used the Adult Census Income dataset with 48,842 instances and 14 attributes. We compared the performance of different noise scaling strategies across various privacy budgets (ε values ranging from 0.1 to 1.0). For each strategy, we measured:
 1. Feature distortion (MAE between original and private features)
 2. Prediction accuracy (MAE between predictions on original and private data)
 
-For unsupervised learning, we used the Household Electricity Demand dataset with daily consumption profiles. We evaluated how well cluster structures were preserved under different privacy mechanisms using:
-1. Silhouette score
-2. Adjusted Rand Index (ARI)
-3. V-measure
 
 Our results demonstrate that MIC-guided noise scaling consistently outperforms other approaches, particularly at stricter privacy levels (lower ε values). For example, at ε = 0.1, MIC-DP reduces prediction MAE by up to 40% compared to uniform baseline DP.
 

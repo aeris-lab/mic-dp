@@ -36,13 +36,13 @@ EPSILONS = np.arange(0.1, 1, 0.1)
 # Load Adult Dataset (Supervised)
 # =====================================
 print("Loading dataset...")
-dataset_path = os.path.join(ROOT, 'data', 'adult.csv')
+dataset_path = os.path.join(ROOT, 'data', 'sample_data.csv')
 print(f"Looking for dataset at: {dataset_path}")
 df = pd.read_csv(dataset_path)
 df.dropna(inplace=True)
 X = df.select_dtypes(include=['number'])
 X_norm = pd.DataFrame(MinMaxScaler().fit_transform(X), columns=X.columns)
-y = df['income'].astype('category').cat.codes
+y = df['Daily_Revenue'].astype('category').cat.codes
 
 # ==============================
 # Feature Selection & Noise Scales
