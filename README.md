@@ -109,10 +109,6 @@ MIC-guided noise scaling consistently outperforms conventional approaches in pre
 - `calculate_ari(labels1, labels2)`: Calculate Adjusted Rand Index between two cluster labelings
 - `calculate_v_measure(labels1, labels2)`: Calculate V-measure between two cluster labelings
 
-## Citation
-
-
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
