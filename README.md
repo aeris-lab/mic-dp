@@ -111,16 +111,7 @@ MIC-guided noise scaling consistently outperforms conventional approaches in pre
 
 ## Citation
 
-If you use this package in your research, please cite:
 
-```
-@article{yang2025micdp,
-  title={mic\_dp: A Python package for maximum information coefficient differential privacy},
-  author={Yang, Wenjun and Al-masri, Eyhab and Kotevska, Olivera},
-  journal={Journal of Open Source Software},
-  year={2025}
-}
-```
 
 ## License
 
@@ -128,6 +119,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgements
 
-We acknowledge the creators of the ACI and HED datasets for making their data publicly available.
+This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research under Contract No. DE-AC05-00OR22725. This manuscript has been co-authored by UT-Battelle, LLC under Contract No. DE-AC05-00OR22725 with the U.S. Department of Energy. The United States Government retains and the publisher, by accepting the article for publication, acknowledges that the United States Government retains a non-exclusive, paid-up, irrevocable, world-wide license to publish or reproduce the published form of this manuscript, or allow others to do so, for United States Government purposes. The Department of Energy will provide public access to these results of federally sponsored research in accordance with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-plan).
 
 ## References
