@@ -114,8 +114,8 @@ For the MIC calculation, we use the MINE algorithm [@Reshef2011], which provides
 We conducted experiments on machine learning tasks to evaluate the effectiveness of our approach.
 
 We used the Adult Census Income dataset with 48,842 instances and 14 attributes. We compared the performance of different noise scaling strategies across various privacy budgets (ε values ranging from 0.1 to 1.0). For each strategy, we measured:
-1. Feature distortion (MAE between original and private features)
-2. Prediction accuracy (MAE between predictions on original and private data)
+1. Feature distortion (MAE between original and private features) (MAE.png)
+2. Prediction accuracy (MAE between predictions on original and private data) (MAE_pred.png)
 
 
 Our results demonstrate that MIC-guided noise scaling consistently outperforms other approaches, particularly at stricter privacy levels (lower ε values). For example, at ε = 0.1, MIC-DP reduces prediction MAE by up to 40% compared to uniform baseline DP.
