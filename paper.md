@@ -36,10 +36,6 @@ This package includes functions for:
 - Applying Gaussian or Laplace DP mechanisms using custom noise scaling
 - Evaluating MAE and plotting results
 
-The library has been evaluated using:
-1. **ACI Dataset (Adult Census Income)** from the UCI repository for supervised learning [@Dua2019]. This dataset includes demographic features used to predict income classes.
-2. **Household Electricity Demand (HED)** dataset from the 2009 Midwest RECS dataset for unsupervised learning [@EIA2009]. This time series dataset provides daily electricity consumption profiles across households.
-
 Our experiments show that MIC-guided DP mechanisms consistently outperform Pearson, Mahalanobis, and baseline DP in terms of feature and prediction accuracy under privacy constraints. In unsupervised settings, MIC-DP preserves cluster structures better, as shown by silhouette score, ARI, and V-measure.
 
 # Statement of Need
