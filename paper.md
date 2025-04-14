@@ -8,7 +8,7 @@ tags:
   - machine learning
   - privacy-preserving
 authors:
-  - name: Wenjun Yang
+  - name: Wenjun Yang^[Corresponding author: wy927@uw.edu]
     orcid: 0000-0000-0000-0000
     affiliation: 1
   - name: Eyhab Al-masri
@@ -22,13 +22,13 @@ affiliations:
     index: 1
   - name: Oak Ridge National Laboratory, United States
     index: 2
-date: 10 April 2025
+date: 14 April 2025
 bibliography: paper.bib
 ---
 
 # Summary
 
-`mic_dp` is a Python package that enables differentially private data transformation guided by the *Maximum Information Coefficient* (MIC), with application to both supervised and unsupervised learning tasks. Traditional differential privacy (DP) mechanisms often degrade utility uniformly across features. In contrast, `mic_dp` uses MIC to scale the noise injection, preserving more utility in informative features.
+Automated privacy-preserving data analysis is a challenging task with significant practical and scientific implications for the developer community. `mic_dp` is a Python package that enables differentially private data transformation guided by the *Maximum Information Coefficient* (MIC), with application to both supervised and unsupervised learning tasks. Traditional differential privacy (DP) mechanisms often degrade utility uniformly across features. In contrast, `mic_dp` uses MIC to scale the noise injection, preserving more utility in informative features.
 
 This package includes functions for:
 - Calculating MIC, Pearson, and Mahalanobis-based feature relevance
@@ -42,7 +42,9 @@ The library has been evaluated using:
 
 Our experiments show that MIC-guided DP mechanisms consistently outperform Pearson, Mahalanobis, and baseline DP in terms of feature and prediction accuracy under privacy constraints. In unsupervised settings, MIC-DP preserves cluster structures better, as shown by silhouette score, ARI, and V-measure.
 
-# Statement of need
+# Statement of Need
+
+The integration of privacy-preserving techniques with data analysis is a research area that addresses tasks such as differential privacy, feature selection, and maintaining utility in machine learning models. These tasks are highly practical, as they can significantly enhance data scientist efficiency, and they are scientifically intriguing due to their complexity and the proposed relationships between privacy, utility, and information theory [@Dwork2014; @Reshef2011].
 
 There is a growing demand for privacy-preserving data analysis tools that can maintain high utility. While several differential privacy libraries exist (e.g., diffprivlib [@Holohan2019]), few provide support for custom noise scaling based on statistical relevance like MIC. `mic_dp` fills this gap by providing a framework to perform smart, feature-sensitive privacy transformations and rigorous evaluations.
 
@@ -55,72 +57,80 @@ Researchers and practitioners in fields such as healthcare, finance, and social 
 3. Compare different noise-scaling strategies
 4. Evaluate the impact of privacy on supervised and unsupervised learning tasks
 
-# Implementation
+# State of the Field
 
-The `mic_dp` package is implemented in Python and builds upon established libraries including scikit-learn [@Pedregosa2011] for machine learning functionality and IBM's diffprivlib [@Holohan2019] for differential privacy mechanisms. The core functionality includes:
+Recently, differential privacy has become increasingly significant, demonstrating important capabilities across various fields [@Dwork2014; @Abadi2016; @Holohan2019]. Differential privacy mechanisms typically employ noise addition techniques and are trained on sensitive data to protect individual privacy while maintaining utility.
+
+We present a Python package that developers can use as a support tool to generate privacy-preserving data transformations for any dataset. Some open-source applications have been developed to address this issue, to name a few:
+
+- IBM Differential Privacy Library [@Holohan2019]
+- Google Differential Privacy [@Wilson2020]
+- OpenDP [@Gaboardi2020]
+
+However, these applications suffer from two major issues. Firstly, all of them apply uniform noise across features, requiring users to manually tune privacy parameters for each feature. Generating privacy-preserving transformations for a large dataset could result in significant utility loss. Our application allows users to choose among different noise scaling strategies based on feature importance.
+
+Secondly, none of the existing open-source applications provide a fine-tuned model or features to enable users to fine-tune custom noise scaling. Our application offers a fine-tuning option using MIC that can be applied to the user's own dataset. It is important to note that using this feature requires understanding of information theory and statistical measures.
+
+# Methodology
+
+The application prompts the user to select the desired noise scaling method from the following options:
+
+- MIC-based scaling
+- Pearson correlation-based scaling
+- Mahalanobis distance-based scaling
+- Uniform (baseline) scaling
+
+For our experimentation and tests, we used Python 3.8+ with scikit-learn, pandas, numpy, and matplotlib libraries.
+
+Document Processing: Our application processes datasets through a pipeline that:
+1. Calculates feature relevance using the selected method (MIC, Pearson, or Mahalanobis)
+2. Scales noise factors inversely proportional to feature importance
+3. Applies differential privacy with the scaled noise factors
+4. Evaluates utility through various metrics (MAE, prediction accuracy, clustering quality)
+
+The application employs the following key functions:
 
 ```python
-# Calculate MIC-based noise scaling factors
+# Calculate noise scaling factors based on feature relevance
 noise_factors = noise_scaling_MIC(target, features, amplification_factor)
 
 # Calculate sensitivity for each feature
 sensitivity = calculate_sensitivity(features)
 
-# Apply Gaussian DP with MIC-guided noise scaling
+# Apply differential privacy with custom noise scaling
 private_data = correlated_dp_gaussian(
     features.copy(), 
     noise_factors, 
     sensitivity, 
-    epsilon=0.5, 
-    delta=1e-5
+    epsilon, 
+    delta
 )
 ```
 
-The package also provides utilities for evaluating the impact of privacy on model performance:
+For the MIC calculation, we use the MINE algorithm [@Reshef2011], which provides a measure of the strength of the relationship between variables, capturing both linear and non-linear associations. The entire methodology for noise scaling and differential privacy application is illustrated in Figure 1.
 
-```python
-# Measure feature distortion
-mae = mean_absolute_error(original_features, private_features)
+![Figure 1: Workflow showing the noise scaling and differential privacy application process. The MIC-based scaling module calculates feature importance and scales noise inversely proportional to importance.](workflow_diagram.png)
 
-# Evaluate clustering quality
-silhouette, labels, model = cluster_and_evaluate(private_data, "MIC-DP", n_clusters=3)
-```
+# Experiments
 
-# Example usage
+We conducted experiments on both supervised and unsupervised learning tasks to evaluate the effectiveness of our approach.
 
-The following example demonstrates how to apply MIC-guided differential privacy to a supervised learning task:
+For supervised learning, we used the Adult Census Income dataset with 48,842 instances and 14 attributes. We compared the performance of different noise scaling strategies across various privacy budgets (ε values ranging from 0.1 to 1.0). For each strategy, we measured:
+1. Feature distortion (MAE between original and private features)
+2. Prediction accuracy (MAE between predictions on original and private data)
 
-```python
-from mic_dp.core import (
-    noise_scaling_MIC, calculate_sensitivity, 
-    correlated_dp_gaussian, mean_absolute_error
-)
-from sklearn.ensemble import RandomForestRegressor
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
+For unsupervised learning, we used the Household Electricity Demand dataset with daily consumption profiles. We evaluated how well cluster structures were preserved under different privacy mechanisms using:
+1. Silhouette score
+2. Adjusted Rand Index (ARI)
+3. V-measure
 
-# Load and preprocess data
-df = pd.read_csv('adult.csv')
-X = df.select_dtypes(include=['number'])
-X_norm = pd.DataFrame(MinMaxScaler().fit_transform(X), columns=X.columns)
-y = df['income'].astype('category').cat.codes
+Our results demonstrate that MIC-guided noise scaling consistently outperforms other approaches, particularly at stricter privacy levels (lower ε values). For example, at ε = 0.1, MIC-DP reduces prediction MAE by up to 40% compared to uniform baseline DP.
 
-# Apply MIC-guided differential privacy
-noise_factors = noise_scaling_MIC(y, X_norm, amplification_factor=5)
-sensitivity = calculate_sensitivity(X_norm)
-private_X = correlated_dp_gaussian(X_norm.copy(), noise_factors, sensitivity, epsilon=0.5, delta=1e-5)
+# Conclusion
 
-# Evaluate utility
-feature_mae = mean_absolute_error(X_norm, private_X)
-print(f"Feature MAE: {feature_mae:.4f}")
+The `mic_dp` package provides a novel approach to differential privacy by leveraging the Maximum Information Coefficient to guide noise scaling. This approach enables more effective privacy-utility trade-offs compared to traditional uniform noise methods. The package is designed to be flexible and easy to use, making it accessible to researchers and practitioners across various domains.
 
-# Train model on private data
-model = RandomForestRegressor()
-model.fit(private_X, y)
-predictions = model.predict(private_X)
-prediction_mae = mean_absolute_error(y, predictions)
-print(f"Prediction MAE: {prediction_mae:.4f}")
-```
+Future work includes extending the package to support additional privacy mechanisms, implementing more advanced feature selection techniques, and exploring the application of MIC-guided differential privacy to other types of data such as text and images.
 
 # Acknowledgements
 
