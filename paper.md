@@ -8,7 +8,7 @@ tags:
   - machine learning
   - privacy-preserving
 authors:
-  - name: Wenjun Yang^[Corresponding author: wy927@uw.edu]
+  - name: Wenjun Yang
     orcid: 0000-0000-0000-0000
     affiliation: 1
   - name: Eyhab Al-masri
