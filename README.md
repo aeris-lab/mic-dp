@@ -105,9 +105,6 @@ MIC-guided noise scaling consistently outperforms conventional approaches in pre
 - `correlated_dp_laplace(X, noise_factors, sensitivity, epsilon, delta)`: Apply Laplace differential privacy with custom noise scaling
 - `feature_selection(percentage, X, noise_scaling_factor)`: Select features based on their noise scaling factors
 - `mean_absolute_error(y_true, y_pred)`: Calculate mean absolute error between true and predicted values
-- `cluster_and_evaluate(df, name, n_clusters)`: Perform clustering and evaluate the results
-- `calculate_ari(labels1, labels2)`: Calculate Adjusted Rand Index between two cluster labelings
-- `calculate_v_measure(labels1, labels2)`: Calculate V-measure between two cluster labelings
 
 ## License
 
