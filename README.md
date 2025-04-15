@@ -90,8 +90,14 @@ python examples/supervised_experiment.py
 
 MIC-guided noise scaling consistently outperforms conventional approaches in preserving prediction accuracy and clustering structure under differential privacy constraints.
 
-![Feature MAE comparison for MIC-DP vs. state-of-art approaches](MAE.png)
-![Prediction MAE comparison for MIC-DP vs. state-of-art approaches](MAE_pred.png)
+<p align="center">
+  <img src="MAE.png" alt="Feature MAE comparison for MIC-DP vs. state-of-art approaches" width="400"/>
+</p>
+
+<p align="center">
+  <img src="MAE_pred.png" alt="Prediction MAE comparison for MIC-DP vs. state-of-art approaches" width="400"/>
+</p>
+
 
 ## API Reference
 
