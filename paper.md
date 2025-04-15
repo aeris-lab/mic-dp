@@ -128,4 +128,9 @@ Future work includes extending the package to support additional privacy mechani
 
 We acknowledge the creators of the CSDRP dataset for making their data publicly available. We also thank the developers of scikit-learn and diffprivlib for their valuable tools that enabled this work.
 
+# Disclaimer
+
+This work is conducted and supported by INTRES ([Internet of Things Research]([url](https://faculty.washington.edu/ealmasri/))) Lab at the University of Washington (Tacoma). INTRES and UW are not responsible for the usage and/or utilization of this package. They are meant to promote IoT research and education. We are not in any way responsible for the misuse of these packages. For more details on the service agreement and terms, please click [here]([url](https://azure.microsoft.com/en-us/support/legal/)).
+
 # References
+
