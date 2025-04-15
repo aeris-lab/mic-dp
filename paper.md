@@ -12,10 +12,10 @@ authors:
     orcid: 0000-0000-0000-0000
     affiliation: 1
   - name: Eyhab Al-masri
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-5163-6792
     affiliation: 1
   - name: Olivera Kotevska
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0003-1677-2243
     affiliation: 2
 affiliations:
   - name: University of Washington Tacoma, United States
