@@ -128,6 +128,8 @@ Future work includes extending the package to support additional privacy mechani
 
 We acknowledge the creators of the CSDRP dataset for making their data publicly available. We also thank the developers of scikit-learn and diffprivlib for their valuable tools that enabled this work.
 
+This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research under Contract No. DE-AC05-00OR22725. This manuscript has been co-authored by UT-Battelle, LLC under Contract No. DE-AC05-00OR22725 with the U.S. Department of Energy. The United States Government retains and the publisher, by accepting the article for publication, acknowledges that the United States Government retains a non-exclusive, paid-up, irrevocable, world-wide license to publish or reproduce the published form of this manuscript, or allow others to do so, for United States Government purposes. The Department of Energy will provide public access to these results of federally sponsored research in accordance with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-plan).
+
 # Disclaimer
 
 This work is conducted and supported by INTRES ([Internet of Things Research]([url](https://faculty.washington.edu/ealmasri/))) Lab at the University of Washington (Tacoma). INTRES and UW are not responsible for the usage and/or utilization of this package. They are meant to promote IoT research and education. We are not in any way responsible for the misuse of these packages. For more details on the service agreement and terms, please click [here]([url](https://azure.microsoft.com/en-us/support/legal/)).
