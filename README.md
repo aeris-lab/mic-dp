@@ -114,7 +114,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research under Contract No. DE-AC05-00OR22725. This manuscript has been co-authored by UT-Battelle, LLC under Contract No. DE-AC05-00OR22725 with the U.S. Department of Energy. The United States Government retains and the publisher, by accepting the article for publication, acknowledges that the United States Government retains a non-exclusive, paid-up, irrevocable, world-wide license to publish or reproduce the published form of this manuscript, or allow others to do so, for United States Government purposes. The Department of Energy will provide public access to these results of federally sponsored research in accordance with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-plan).
 
-## Acknowledgements
-This work is conducted and supported by INTRES ([Internet of Things Research]([url](https://faculty.washington.edu/ealmasri/))) Lab at the University of Washington (Tacoma). INTRES and UW are not responsible for the usage and/or utilization of this package. They are meant to promote IoT research and education. We are not in any way responsible for the misuse of these packages. For more details on the service agreement and terms, please click [here]([url](https://azure.microsoft.com/en-us/support/legal/)).
+## AERIS Lab
+This work is conducted and supported by the **AERIS** Lab at the Universty of Washington Tacoma. At the AERIS Lab (AI & Embedded Research in Intelligent Systems), we advance the frontier of intelligent, secure, and networked technologies for the Internet of Things (IoT), edge computing, and cyber-physical systems. Our mission is to design, develop, and deploy scalable AI-driven architectures that enable real-time decision-making, privacy-preserving analytics, and seamless integration of sensing, computing, and communication. We emphasize responsible AI, sustainability, and societal impact through interdisciplinary research in smart infrastructure, embedded intelligence, and trustworthy computing.
+
+![image](https://github.com/user-attachments/assets/3554011d-1643-4a64-883e-72910000c8b6 = 250x250)
+
 
 ## References
