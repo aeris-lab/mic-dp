@@ -123,7 +123,8 @@ This material is based upon work supported by the U.S. Department of Energy, Off
 ## AERIS Lab
 This work is conducted and supported by the **AERIS** Lab at the Universty of Washington Tacoma. At the AERIS Lab (AI & Embedded Research in Intelligent Systems), we advance the frontier of intelligent, secure, and networked technologies for the Internet of Things (IoT), edge computing, and cyber-physical systems. Our mission is to design, develop, and deploy scalable AI-driven architectures that enable real-time decision-making, privacy-preserving analytics, and seamless integration of sensing, computing, and communication. We emphasize responsible AI, sustainability, and societal impact through interdisciplinary research in smart infrastructure, embedded intelligence, and trustworthy computing.
 
-![image](https://github.com/user-attachments/assets/3554011d-1643-4a64-883e-72910000c8b6 = 250x250)
-
+<p align="center">
+  <img src="aires-lab.png" alt="AIRES Lab at UW Tacoma" width="400"/>
+</p>
 
 ## References
