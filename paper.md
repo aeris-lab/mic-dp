@@ -116,7 +116,7 @@ We use Coffee Shop Daily Revenue Prediction Dataset (CSDRP) to support machine l
 2. Prediction accuracy (MAE between predictions on original and private data) ![Prediction MAE comparison for MIC-DP vs. state-of-art approaches](MAE_pred.png)
 
 
-Our results demonstrate that MIC-guided noise scaling consistently outperforms other approaches, particularly at stricter privacy levels (lower ε values). For example, at ε = 0.1, MIC-DP reduces prediction MAE by up to 40% compared to uniform baseline DP.
+
 
 # Conclusion
 
