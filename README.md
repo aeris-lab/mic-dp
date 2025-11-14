@@ -20,14 +20,14 @@ You can install the package directly from PyPI:
 pip install micdp
 ```
 
-Or install from source:
+<!--Or install from source:
 
 ```bash
 git clone https://github.com/merlery/mic_dp.git
 cd mic_dp
 pip install -e .
 ```
-
+-->
 ## Quick Start
 
 Here's a simple example of how to use `mic_dp` for supervised learning:
