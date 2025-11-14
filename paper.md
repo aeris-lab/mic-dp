@@ -7,7 +7,7 @@ tags:
   - mutual information
   - machine learning
   - privacy-preserving
-authors:
+<!--authors:
   - name: Wenjun Yang
     orcid: 0009-0005-0629-9335
     affiliation: 1
@@ -25,7 +25,7 @@ affiliations:
 date: 14 April 2025
 bibliography: paper.bib
 ---
-
+-->
 # Summary
 
 Automated privacy-preserving data analysis is a challenging task with significant practical and scientific implications for the developer community. `mic_dp` is a Python package that enables differentially private data transformation guided by the *Maximum Information Coefficient* (MIC), with application to both supervised and unsupervised learning tasks. Traditional differential privacy (DP) mechanisms often degrade utility uniformly across features. In contrast, `mic_dp` uses MIC to scale the noise injection, preserving more utility in informative features.
@@ -127,7 +127,7 @@ Future work includes extending the package to support additional privacy mechani
 # Acknowledgements
 
 We acknowledge the creators of the CSDRP dataset for making their data publicly available. We also thank the developers of scikit-learn and diffprivlib for their valuable tools that enabled this work.
-
+<!--
 This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research under Contract No. DE-AC05-00OR22725. This manuscript has been co-authored by UT-Battelle, LLC under Contract No. DE-AC05-00OR22725 with the U.S. Department of Energy. The United States Government retains and the publisher, by accepting the article for publication, acknowledges that the United States Government retains a non-exclusive, paid-up, irrevocable, world-wide license to publish or reproduce the published form of this manuscript, or allow others to do so, for United States Government purposes. The Department of Energy will provide public access to these results of federally sponsored research in accordance with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-plan).
 
 ## AERIS Lab
@@ -138,6 +138,6 @@ This material is based upon work supported by the U.S. Department of Energy, Off
 This work is conducted and supported by AERIS Lab at the University of Washington Tacoma. At the AERIS Lab (AI & Embedded Research in Intelligent Systems), we advance the frontier of intelligent, secure, and networked technologies for the Internet of Things (IoT), edge computing, and cyber-physical systems. Our mission is to design, develop, and deploy scalable AI-driven architectures that enable real-time decision-making, privacy-preserving analytics, and seamless integration of sensing, computing, and communication. We emphasize responsible AI, sustainability, and societal impact through interdisciplinary research in smart infrastructure, embedded intelligence, and trustworthy computing. For more information, please visit: http://faculty.uw.edu/ealmasri
 </div>
 
-
+-->
 # References
 
