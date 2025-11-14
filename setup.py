@@ -15,13 +15,13 @@ setup(
         "lifelines",
         "statsmodels"
     ],
-    author="Wenjun Yang, Eyhab Al-masri, Olivera Kotevska",
-    author_email="wy927@uw.edu, ealmasri@uw.edu, kotevskao@ornl.gov",
+    author="Jane Doe",
+    author_email="janedoe@somewhere.com",
     description="A Python package for maximum information coefficient differential privacy",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     keywords="differential-privacy mic machine-learning privacy-preserving feature-selection",
-    url="https://github.com/uwtintres/mic-dp",
+    url="",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
